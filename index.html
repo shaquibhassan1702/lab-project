@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Social Media Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar" id="sidebar">
+  <h2 class="logo">Flair</h2>
+  <nav>
+    <a class="active">🏠 Dashboard</a>
+    <a>📝 Posts</a>
+    <a>📊 Analytics</a>
+    <a>💬 Messages <span class="badge">3</span></a>
+    <a>⚙ Settings</a>
+  </nav>
+</div>
+
+<div class="main">
+  <header class="topbar">
+    <div class="left">
+      <button class="icon-btn" onclick="toggleSidebar()">☰</button>
+      <input class="search" placeholder="Search posts, comments...">
+    </div>
+    <div class="right">
+      <button class="icon-btn" title="Notifications">🔔</button>
+      <button class="icon-btn" onclick="toggleTheme()" title="Toggle theme">🌙</button>
+      <div class="avatar">SH</div>
+    </div>
+  </header>
+
+  <section class="cards">
+    <div class="card"><h3>Followers</h3><div class="value" id="followers">0</div><p>+12% this week</p></div>
+    <div class="card"><h3>Likes</h3><div class="value" id="likes">0</div><p>+8% this week</p></div>
+    <div class="card"><h3>Comments</h3><div class="value" id="comments">0</div><p>-2% this week</p></div>
+    <div class="card"><h3>Shares</h3><div class="value" id="shares">0</div><p>+4% this week</p></div>
+  </section>
+
+  <section class="table">
+    <div class="table-header">
+      <h2>Recent Posts</h2>
+      <select id="filterStatus">
+        <option value="all">All</option>
+        <option value="Published">Published</option>
+        <option value="Scheduled">Scheduled</option>
+        <option value="Draft">Draft</option>
+      </select>
+    </div>
+    <table>
+      <thead><tr><th>Post</th><th>Likes</th><th>Comments</th><th>Status</th></tr></thead>
+      <tbody id="postTable"></tbody>
+    </table>
+  </section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+
