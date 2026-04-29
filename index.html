@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>📅 Event Management System</h1>
+        <p>Plan, organize, and manage your events effortlessly</p>
+    </div>
+
+    <div class="main-content">
+
+        <!-- FORM SECTION -->
+        <div class="form-section">
+            <h2>Add New Event</h2>
+
+            <form id="eventForm">
+
+                <div class="form-group">
+                    <label>Event Title *</label>
+                    <input type="text" id="eventTitle" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Date & Time *</label>
+                    <input type="datetime-local" id="eventDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Event Type</label>
+                    <select id="eventType">
+                        <option value="">Select Type</option>
+                        <option value="meeting">Meeting</option>
+                        <option value="workshop">Workshop</option>
+                        <option value="party">Party</option>
+                        <option value="conference">Conference</option>
+                        <option value="webinar">Webinar</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="eventDesc" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn">➕ Add Event</button>
+
+            </form>
+        </div>
+
+        <!-- EVENTS SECTION -->
+        <div class="events-section">
+
+            <!-- STATS -->
+            <div class="stats">
+                <div class="stat-card">
+                    <span class="stat-number" id="totalEvents">0</span>
+                    Total Events
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-number" id="todayEvents">0</span>
+                    Today's Events
+                </div>
+            </div>
+
+            <!-- EVENTS -->
+            <div id="eventsContainer" class="events-grid">
+                <div class="no-events">
+                    No events yet. Add your first event!
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- IMPORTANT -->
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
